@@ -15,11 +15,8 @@ class MountUserService < ApplicationService
   
     def mount_user
       user = User.new
-      user.id = @item['id']
-      user.name = @item['name']
-      user.full_name = @item['full_name']
-      user.stargazers_count = @item['stargazers_count']
-      user.url = @item['url']
+      user.github_id = @item[:owner][:id]
+      user.login = @item[:owner][:login]
   
       user
     end

@@ -15,11 +15,9 @@ class MountRepositoryService < ApplicationService
   
     def mount_repository
       repository = Repository.new
-      repository.id = @item['id']
-      repository.name = @item['name']
-      repository.full_name = @item['full_name']
-      repository.stargazers_count = @item['stargazers_count']
-      repository.url = @item['url']
+      repository.github_id = @item[:id]
+      repository.name = @item[:name]
+      repository.stargazers_count = @item[:stargazers_count]
   
       repository
     end
