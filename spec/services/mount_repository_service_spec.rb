@@ -109,5 +109,6 @@ RSpec.describe MountRepositoryService, type: :service do
     it { expect(item_response[:name]).to eq(mounted_repository.name) }
     it { expect(item_response[:id]).to eq(mounted_repository.github_id) }
     it { expect(item_response[:stargazers_count]).to eq(mounted_repository.stargazers_count) }
+    it { expect(item_response[:owner][:id]).to eq(mounted_repository.user.github_id) }
   end
 end
