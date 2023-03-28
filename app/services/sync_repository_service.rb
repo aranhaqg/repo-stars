@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class SearchRepositoryService < ApplicationService
+class SyncRepositoryService < ApplicationService
     include HTTParty
     attr_reader :user_login
   
@@ -22,10 +22,8 @@ class SearchRepositoryService < ApplicationService
       
       items.each do |item|
         repository = MountRepositoryService.call(item.deep_symbolize_keys)
-        repo_list << repository
+        repository.save
       end
-      
-      repo_list
     end
   end
   

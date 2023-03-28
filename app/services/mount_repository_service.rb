@@ -14,8 +14,7 @@ class MountRepositoryService < ApplicationService
     private
   
     def mount_repository
-      repository = Repository.new
-      repository.github_id = @item[:id]
+      repository = Repository.find_or_create_by(github_id: @item[:id])
       repository.name = @item[:name]
       repository.stargazers_count = @item[:stargazers_count]
       repository.user_id = find_or_create_github_user

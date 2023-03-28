@@ -2,17 +2,13 @@ module Api
 	module V1	
     class RepositoriesController < ApplicationController
 
-        def show           
-          
-          user_login = params[:id] 
-          
-          repo_list = SearchRepositoryService.call(user_login)
-          
+      def show           
+        user_login = params[:id] 
+        
+        job = SyncReposJob.perform_now(user_login)
 
-          render json: {message: :ok, items: repo_list}, status: :ok
-        end
-
+        render json: {message: :ok, items: job}, status: :ok
+      end
     end
-
   end
 end
