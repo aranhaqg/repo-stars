@@ -18,7 +18,6 @@ class SyncRepositoryService < ApplicationService
   
     def process_response(response)
       items = response['items']
-      repo_list = []
       
       items.each do |item|
         repository = MountRepositoryService.call(item.deep_symbolize_keys)

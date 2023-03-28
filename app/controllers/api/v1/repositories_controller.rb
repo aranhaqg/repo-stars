@@ -2,12 +2,16 @@ module Api
 	module V1	
     class RepositoriesController < ApplicationController
 
-      def show           
-        user_login = params[:id] 
-        
-        job = SyncReposJob.perform_now(user_login)
+      def show 
+        if params[:id] && !params[:id].empty?     
+          user_login = params[:id] 
+          
+          jid = SyncReposJob.perform_later(user_login).provider_job_id
 
-        render json: {message: :ok, items: job}, status: :ok
+          render json: {message: :ok, job_id: jid}, status: :ok
+        else
+          render json: {error: 'User login missing'}, status: :bad_request
+        end
       end
     end
   end
