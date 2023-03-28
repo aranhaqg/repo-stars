@@ -29,7 +29,6 @@ Start Sidekiq
 ```sh
 bundle exec sidekiq
 ```
-
 You can send a request to the API with
 ```sh
 curl -X GET "http://localhost:3000/api/v1/repositories?id=aranhaqg"
