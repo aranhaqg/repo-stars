@@ -46,6 +46,7 @@ group :development, :test do
   gem 'factory_bot', '~> 4.8', '>= 4.8.2'
   gem 'shoulda-matchers', '~> 5.0'
   gem 'webmock'
+  gem 'bundler-audit'
 end
 
 group :development do
