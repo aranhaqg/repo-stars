@@ -1,0 +1,19 @@
+AllCops:
+  Exclude:
+    - 'bin/*'
+    - 'vendor/**/*'
+  NewCops: enable
+Style/Documentation:
+  Enabled: false
+Style/SingleArgumentDig:
+  Enabled: false
+Layout/LineLength:
+  Max: 120
+Lint/MissingSuper:
+  Enabled: false
+Lint/ShadowingOuterLocalVariable:
+  Enabled: false
+Metrics/BlockLength:
+  Max: 60
+Lint/ConstantDefinitionInBlock:
+  Enabled: false
