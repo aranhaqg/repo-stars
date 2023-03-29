@@ -1,4 +1,5 @@
-# README
+# Repo Stars Tracker REST API
+![GitHub Actions CI](https://github.com/aranhaqg/repo-stars/actions/workflows/rubyonrails.yml/badge.svg)
 
 This Rails REST API that keeps track of the stars that a given user login has in its Github repositories.
 
