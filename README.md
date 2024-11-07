@@ -8,11 +8,11 @@ This application have the endpoint "api/v1/repositories" that receives the param
 
 These are some dependencies:
 
-* Ruby 3.1.3
-* Rails 7.0.4
-* Sidekiq 7.0.7
-* RSpec 6.0.0
-* PG 1.4
+* Ruby 3.2.0
+* Rails 7.2.2
+* Sidekiq
+* RSpec
+* PG
 
 For more details check [Gemfile](Gemfile).
 
@@ -31,6 +31,13 @@ Start Sidekiq
 ```sh
 bundle exec sidekiq
 ```
+
+Or you can use Docker to run all
+
+```sh
+docker compose up --build
+```
+
 You can send a request to the API with
 ```sh
 curl -X GET "http://localhost:3000/api/v1/repositories?id=aranhaqg"
