@@ -3,16 +3,16 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.1.3'
+ruby '3.2.0'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem 'rails', '~> 7.0.4', '>= 7.0.4.3'
+gem 'rails', '7.2.2'
 
 # Use postgres as the database for Active Record
 gem 'pg', '~> 1.4', '>= 1.4.6'
 
 # Use the Puma web server [https://github.com/puma/puma]
-gem 'puma', '~> 5.0'
+gem 'puma','6.4.3'
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
@@ -37,6 +37,7 @@ gem 'bootsnap', require: false
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem "rack-cors"
+
 gem 'httparty'
 
 gem 'sidekiq'
@@ -46,8 +47,8 @@ group :development, :test do
   gem 'brakeman'
   gem 'bundler-audit'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
-  gem 'factory_bot', '~> 4.8', '>= 4.8.2'
-  gem 'rspec-rails', '~> 6.0.0'
+  gem 'factory_bot'
+  gem 'rspec-rails'
   gem 'rubocop'
   gem 'shoulda-matchers', '~> 5.0'
   gem 'webmock'
