@@ -1,10 +1,10 @@
 # Repo Stars Tracker REST API
 ![GitHub Actions CI](https://github.com/aranhaqg/repo-stars/actions/workflows/rubyonrails.yml/badge.svg)
-[![Ruby Style Guide](https://img.shields.io/badge/code_style-rubocop-brightgreen.svg)](https://github.com/rubocop-hq/rubocop) 
+[![Ruby Style Guide](https://img.shields.io/badge/code_style-rubocop-brightgreen.svg)](https://github.com/rubocop-hq/rubocop)
 
 This Rails REST API that keeps track of the stars that a given user login has in its Github repositories.
 
-This application have the endpoint "api/v1/repositories" that receives the params id as a Github user name and in the background searches the user's public repositories using [Github's REST API](https://docs.github.com/en/rest/overview/resources-in-the-rest-api) and saves in a Postgres database their repository name and how many stars it has.
+This application have the endpoint "api/v1/repositories" that receives the params ```id``` as a Github user name and in the background searches the user's public repositories using [Github's REST API](https://docs.github.com/en/rest/overview/resources-in-the-rest-api) and saves in a Postgres database their repository name and how many stars it has.
 
 These are some dependencies:
 
@@ -38,6 +38,7 @@ curl -X GET "http://localhost:3000/api/v1/repositories?id=aranhaqg"
 
 ## How to run the test suite
 Run the RSpec with
+
 ```sh
 bundle exec rspec
 ```
