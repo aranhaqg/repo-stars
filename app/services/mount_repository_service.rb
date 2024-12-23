@@ -23,8 +23,10 @@ class MountRepositoryService < ApplicationService
 
   def find_or_create_github_user
     user_github_id = @item[:owner][:id]
-    login = @item[:owner][:id]
-    user = User.find_or_create_by(github_id: user_github_id, login:)
+    login = @item[:owner][:login]
+    user = User.find_or_create_by(github_id: user_github_id) do |u|
+      u.login = login
+    end
     user.id
   end
 end

@@ -11,10 +11,19 @@ class SyncRepositoryService < ApplicationService
   def call
     response = self.class.get("https://api.github.com/search/repositories?q=user:#{@user_login}")
 
-    process_response(response.parsed_response)
+    if response.success?
+      process_response(response.parsed_response)
+    else
+      handle_error(response)
+    end
   end
 
   private
+
+  def handle_error(response)
+    # Log the error or handle it as needed
+    Rails.logger.error("Failed to fetch repositories: #{response.code} #{response.message}")
+  end
 
   def process_response(response)
     items = response['items']
