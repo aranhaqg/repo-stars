@@ -1,5 +1,5 @@
 # Repo Stars Tracker REST API
-![GitHub Actions CI](https://github.com/aranhaqg/repo-stars/actions/workflows/rubyonrails.yml/badge.svg)
+![GitHub Actions CI](https://github.com/aranhaqg/repo-stars/actions/workflows/CI.yml/badge.svg)
 [![Ruby Style Guide](https://img.shields.io/badge/code_style-rubocop-brightgreen.svg)](https://github.com/rubocop-hq/rubocop)
 
 This Rails REST API that keeps track of the stars that a given user login has in its Github repositories.
@@ -8,8 +8,8 @@ This application have the endpoint "api/v1/repositories" that receives the param
 
 These are some dependencies:
 
-* Ruby 3.2.0
-* Rails 7.2.2
+* Ruby 3.2.5
+* Rails 7.2.2.1
 * Sidekiq
 * RSpec
 * PG
