@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.2.0'
+ruby '3.2.5'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '7.2.2'
@@ -48,7 +48,12 @@ group :development, :test do
   gem 'bundler-audit'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'factory_bot'
-  gem 'rspec-rails'
+  gem "rspec", github: "rspec/rspec", branch: "main"
+  gem "rspec-core", github: "rspec/rspec-core", branch: "main"
+  gem "rspec-mocks", github: "rspec/rspec-mocks", branch: "main"
+  gem "rspec-expectations", github: "rspec/rspec-expectations", branch: "main"
+  gem "rspec-support", github: "rspec/rspec-support", branch: "main"
+  gem "rspec-rails", github: "rspec/rspec-rails"
   gem 'rubocop'
   gem 'shoulda-matchers', '~> 5.0'
   gem 'webmock'
