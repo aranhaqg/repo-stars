@@ -6,13 +6,13 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.2.5'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem 'rails', '7.2.2'
+gem 'rails', '7.2.2.1'
 
 # Use postgres as the database for Active Record
 gem 'pg', '~> 1.4', '>= 1.4.6'
 
 # Use the Puma web server [https://github.com/puma/puma]
-gem 'puma','6.4.3'
+gem 'puma', '6.4.3'
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
@@ -48,12 +48,12 @@ group :development, :test do
   gem 'bundler-audit'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'factory_bot'
-  gem "rspec", github: "rspec/rspec", branch: "main"
-  gem "rspec-core", github: "rspec/rspec-core", branch: "main"
-  gem "rspec-mocks", github: "rspec/rspec-mocks", branch: "main"
-  gem "rspec-expectations", github: "rspec/rspec-expectations", branch: "main"
-  gem "rspec-support", github: "rspec/rspec-support", branch: "main"
-  gem "rspec-rails", github: "rspec/rspec-rails"
+  gem 'rspec', github: 'rspec/rspec', branch: 'main'
+  gem 'rspec-core', github: 'rspec/rspec-core', branch: 'main'
+  gem 'rspec-expectations', github: 'rspec/rspec-expectations', branch: 'main'
+  gem 'rspec-mocks', github: 'rspec/rspec-mocks', branch: 'main'
+  gem 'rspec-rails', github: 'rspec/rspec-rails'
+  gem 'rspec-support', github: 'rspec/rspec-support', branch: 'main'
   gem 'rubocop'
   gem 'shoulda-matchers', '~> 5.0'
   gem 'webmock'
